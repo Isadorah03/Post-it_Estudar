@@ -1,0 +1,48 @@
+# Lista de Assuntos para Estudar
+
+## Objetivo do projeto
+
+Este é um projeto de estudo com um foco bem específico: **entender, na prática, como um frontend consome uma API de um backend.**
+
+A aplicação em si é simples de propósito — uma lista onde é possível cadastrar assuntos que preciso estudar. O valor do projeto não está na complexidade da funcionalidade, e sim em construir, do zero, a ligação real entre as duas pontas: uma interface que faz pedidos, e um servidor que responde a esses pedidos.
+
+## Motivação
+
+Antes deste projeto, eu entendia o conceito de API na teoria, mas nunca tinha visto — nem construído — essa ligação funcionando na prática. Esse projeto nasceu da vontade de fechar essa lacuna com um exemplo pequeno, direto e 100% meu.
+
+## Decisões tomadas
+
+| Decisão | Escolha | Motivo |
+|---|---|---|
+| Tema da aplicação | Lista de assuntos para estudar | Simples, mas com utilidade real pra mim |
+| Frontend | HTML + JavaScript puro | Sem framework, pra focar na lógica da ligação, sem abstrações escondendo o processo |
+| Ordem de construção do front | Primeiro estrutura/funcionalidade, CSS por último | Separar "funciona" de "está bonito" |
+| Linguagem do backend | Python (Flask) | Sintaxe simples, poucas configurações, permite ver o resultado rápido |
+| Ambiente | Local (`localhost`), sem deploy por enquanto | Foco em aprender a ligação antes de aprender hospedagem |
+| Armazenamento dos dados | Lista em memória no Python (por enquanto) | Elimina a complexidade de um banco de dados nesta primeira versão |
+| Ordem de construção geral | Frontend e backend construídos separadamente primeiro, ligação feita por último | Entender cada lado sozinho antes de conectar os dois |
+
+## Como a aplicação vai funcionar
+
+1. O frontend mostra um campo de texto e um botão para adicionar um novo assunto.
+2. Ao clicar em salvar, o frontend envia esse assunto para o backend através de uma requisição `POST`.
+3. O backend recebe o assunto e guarda numa lista.
+4. O frontend também pede ao backend, por uma requisição `GET`, todos os assuntos já salvos, e os exibe na tela.
+5. Ao recarregar a página, os assuntos continuam lá, porque estão guardados no backend — não apenas na tela.
+
+## Roadmap (próximos passos, fora do escopo inicial)
+
+- [ ] Estilizar a interface com CSS
+- [ ] Permitir marcar um assunto como "já estudado"
+- [ ] Permitir excluir um assunto da lista
+- [ ] Substituir a lista em memória por persistência real em banco de dados (ex: SQLite)
+- [ ] Deploy em um servidor acessível pela internet
+
+## Tecnologias
+
+- Frontend: HTML, JavaScript
+- Backend: Python, Flask
+
+## Status
+
+🚧 Em desenvolvimento — projeto de estudo pessoal.

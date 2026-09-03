@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Assuntos para Estudar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div>
+    <img src="Imagens/post-it.png" alt="Post-it de Estudos" class="topo-img">
+  </div>
+  <div>
+    <h1>Post-it de estudos</h1>
+  </div>
+
+    <textarea id="meuInput" rows="4" cols="25" placeholder="Digite o conteudo aqui"></textarea><br>
+<button onclick="salvarTexto()">Salvar nota</button>
+
+<ul id="listaAssuntos"></ul>
+
+<script>
+  function salvarTexto() {
+    let assuntoDigitado = document.getElementById("meuInput").value;
+    console.log("O usuário digitou: " + assuntoDigitado);
+
+    let listaAssuntos = document.getElementById("listaAssuntos");
+    let novoItem = document.createElement("li");
+    novoItem.textContent = assuntoDigitado;
+    listaAssuntos.appendChild(novoItem);  
+
+    document.getElementById("meuInput").value = "";
+  }
+</script>
+</body>
+</html>
