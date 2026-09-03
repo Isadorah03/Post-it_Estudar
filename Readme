@@ -20,7 +20,7 @@ Antes deste projeto, eu entendia o conceito de API na teoria, mas nunca tinha vi
 
 ## Roadmap (próximos passos, fora do escopo inicial)
 
-- [ ] Estilizar a interface com CSS
+- [x] Estilizar a interface com CSS
 - [ ] Permitir marcar um assunto como "já estudado"
 - [ ] Permitir excluir um assunto da lista
 - [ ] Substituir a lista em memória por persistência real em banco de dados (ex: SQLite)
