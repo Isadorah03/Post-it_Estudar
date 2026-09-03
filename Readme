@@ -10,18 +10,6 @@ A aplicação em si é simples de propósito — uma lista onde é possível cad
 
 Antes deste projeto, eu entendia o conceito de API na teoria, mas nunca tinha visto — nem construído — essa ligação funcionando na prática. Esse projeto nasceu da vontade de fechar essa lacuna com um exemplo pequeno, direto e 100% meu.
 
-## Decisões tomadas
-
-| Decisão | Escolha | Motivo |
-|---|---|---|
-| Tema da aplicação | Lista de assuntos para estudar | Simples, mas com utilidade real pra mim |
-| Frontend | HTML + JavaScript puro | Sem framework, pra focar na lógica da ligação, sem abstrações escondendo o processo |
-| Ordem de construção do front | Primeiro estrutura/funcionalidade, CSS por último | Separar "funciona" de "está bonito" |
-| Linguagem do backend | Python (Flask) | Sintaxe simples, poucas configurações, permite ver o resultado rápido |
-| Ambiente | Local (`localhost`), sem deploy por enquanto | Foco em aprender a ligação antes de aprender hospedagem |
-| Armazenamento dos dados | Lista em memória no Python (por enquanto) | Elimina a complexidade de um banco de dados nesta primeira versão |
-| Ordem de construção geral | Frontend e backend construídos separadamente primeiro, ligação feita por último | Entender cada lado sozinho antes de conectar os dois |
-
 ## Como a aplicação vai funcionar
 
 1. O frontend mostra um campo de texto e um botão para adicionar um novo assunto.
