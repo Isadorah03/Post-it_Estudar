@@ -10,29 +10,20 @@ A aplicação em si é simples de propósito — uma lista onde é possível cad
 
 Antes deste projeto, eu entendia o conceito de API na teoria, mas nunca tinha visto — nem construído — essa ligação funcionando na prática. Esse projeto nasceu da vontade de fechar essa lacuna com um exemplo pequeno, direto e 100% meu.
 
-## Decisões tomadas
+## Como a aplicação funciona
 
-| Decisão | Escolha | Motivo |
-|---|---|---|
-| Tema da aplicação | Lista de assuntos para estudar | Simples, mas com utilidade real pra mim |
-| Frontend | HTML + JavaScript puro | Sem framework, pra focar na lógica da ligação, sem abstrações escondendo o processo |
-| Ordem de construção do front | Primeiro estrutura/funcionalidade, CSS por último | Separar "funciona" de "está bonito" |
-| Linguagem do backend | Python (Flask) | Sintaxe simples, poucas configurações, permite ver o resultado rápido |
-| Ambiente | Local (`localhost`), sem deploy por enquanto | Foco em aprender a ligação antes de aprender hospedagem |
-| Armazenamento dos dados | Lista em memória no Python (por enquanto) | Elimina a complexidade de um banco de dados nesta primeira versão |
-| Ordem de construção geral | Frontend e backend construídos separadamente primeiro, ligação feita por último | Entender cada lado sozinho antes de conectar os dois |
+1. O frontend mostra um campo de texto e um botão para adicionar um novo assunto. ✅
+2. Ao clicar em salvar, o frontend envia esse assunto para o backend através de uma requisição `POST`. ✅
+3. O backend recebe o assunto e guarda numa lista. ✅
+4. O frontend também pede ao backend, por uma requisição `GET`, todos os assuntos já salvos, e os exibe na tela. ⬜ *(o backend já responde ao `GET`, falta o frontend fazer o pedido ao abrir a página)*
+5. Ao recarregar a página, os assuntos continuam lá, porque estão guardados no backend — não apenas na tela. ⬜ *(depende do passo 4)*
 
-## Como a aplicação vai funcionar
+## Roadmap 
 
-1. O frontend mostra um campo de texto e um botão para adicionar um novo assunto.
-2. Ao clicar em salvar, o frontend envia esse assunto para o backend através de uma requisição `POST`.
-3. O backend recebe o assunto e guarda numa lista.
-4. O frontend também pede ao backend, por uma requisição `GET`, todos os assuntos já salvos, e os exibe na tela.
-5. Ao recarregar a página, os assuntos continuam lá, porque estão guardados no backend — não apenas na tela.
-
-## Roadmap (próximos passos, fora do escopo inicial)
-
-- [ ] Estilizar a interface com CSS
+- [x] Estilizar a interface com CSS
+- [x] Criar o backend em Flask com as rotas `GET` e `POST`
+- [x] Enviar o assunto digitado ao backend com `fetch` (`POST`)
+- [ ] Carregar a lista salva no backend ao abrir a página (`GET`)
 - [ ] Permitir marcar um assunto como "já estudado"
 - [ ] Permitir excluir um assunto da lista
 - [ ] Substituir a lista em memória por persistência real em banco de dados (ex: SQLite)
@@ -40,9 +31,11 @@ Antes deste projeto, eu entendia o conceito de API na teoria, mas nunca tinha vi
 
 ## Tecnologias
 
-- Frontend: HTML, JavaScript
-- Backend: Python, Flask
+- Frontend: HTML, CSS, JavaScript (`fetch`)
+- Backend: Python, Flask, Flask-CORS
 
 ## Status
 
-🚧 Em desenvolvimento — projeto de estudo pessoal.
+🚧 Em desenvolvimento — projeto de estudo pessoal. O frontend já envia os assuntos para o backend; falta fazer a página buscar a lista salva ao carregar.
+
+![Tela do Post-it de estudos](imagens/image.png)

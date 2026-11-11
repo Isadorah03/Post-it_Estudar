@@ -11,7 +11,7 @@
 </head>
 <body>
   <div>
-    <img src="Imagens/post-it.png" alt="Post-it de Estudos" class="topo-img">
+    <img src="imagens/post-it.png" alt="post-it de Estudos" class="topo-img">
   </div>
   <div>
     <h1>Post-it de estudos</h1>
@@ -22,18 +22,8 @@
 
 <ul id="listaAssuntos"></ul>
 
-<script>
-  function salvarTexto() {
-    let assuntoDigitado = document.getElementById("meuInput").value;
-    console.log("O usuário digitou: " + assuntoDigitado);
-
-    let listaAssuntos = document.getElementById("listaAssuntos");
-    let novoItem = document.createElement("li");
-    novoItem.textContent = assuntoDigitado;
-    listaAssuntos.appendChild(novoItem);  
-
-    document.getElementById("meuInput").value = "";
-  }
-</script>
+<script src="script.js"></script>
 </body>
 </html>
+
+ 
